@@ -11,5 +11,5 @@ Descriptions of WormPicker can be found at:
 WormPickerControl is hosted on Github, the repository can be viewed and cloned at:
     https://github.com/Zihao-celegans/WormPickerControl
    
-Improvements and updates will be released on a regular basis, please contact fangyen@seas.upenn.edu if you have any questions or if you would like to contribute
+Improvements and updates will be released on a regular basis, please contact fangyen@seas.upenn.edu if you have any questions or if you would like to contribute.
 
