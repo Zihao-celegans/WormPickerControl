@@ -1,3 +1,7 @@
-## WormPickerControl V1.0 Instructions
+# WormPickerControl V1.0 Instructions
 
-# STEP 1:
+## Installation
+
+### Step 1 Establish Integrated Development Environment (IDE)
+#### 1.1 Install 
+
