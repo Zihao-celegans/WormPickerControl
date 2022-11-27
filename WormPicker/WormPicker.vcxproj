@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{AFD64DDB-189D-4A3D-BB85-9F34D31A3FC7}</ProjectGuid>
+    <RootNamespace>Picky</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <ProjectName>WormPicker</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\opencv\build\include\opencv2</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\opencv\build\x64\vc15\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world340d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\include\udshl;C:\Program Files\Basler\pylon 6\Development\include;C:\opencv\build\include;C:\boost_1_66_0\boost_1_66_0;C:\dxl_sdk_win64_v2_02\import;..\..\Autogans\DNN;..\..\Autogans\WormPicker;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\include;..\..\Autogans\ActivityCalc</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0601;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ShowIncludes>false</ShowIncludes>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um;C:\boost_1_66_0\stage\lib;C:\opencv\build\x64\vc15\lib;C:\boost_1_66_0\boost_1_66_0\stage\x64\lib;C:\dxl_sdk_win64_v2_02\import;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\include;C:\Program Files\Basler\pylon 6\Development\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world348d.lib;dynamixel2_win64.lib;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\x64\release\tis_udshl12_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\include\udshl;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\include;C:\Program Files\Basler\pylon 6\Development\include;C:\opencv\build\include\;C:\boost_1_66_0\boost_1_66_0;C:\dxl_sdk_win64_v2_02\import;..\..\Autogans\DNN;..\..\Autogans\WormPicker;..\..\Autogans\ActivityCalc</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0601;BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\Autogans\WormPicker;C:\opencv\build\x64\vc15\lib;C:\boost_1_66_0\boost_1_66_0\stage\x64\lib;C:\dxl_sdk_win64_v2_02\import;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\include;C:\Program Files\Basler\pylon 6\Development\lib\x64;C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\x64\release;C:\Users\Yuchi\Documents\IC Imaging Control 3.5\classlib\include\udshl</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world348.lib;dynamixel2_win64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ActivityCalc\DirList.cpp" />
+    <ClCompile Include="..\ActivityCalc\showDebugImage.cpp" />
+    <ClCompile Include="..\DNN\DnnHelper.cpp" />
+    <ClCompile Include="..\DNN\mask_rcnn.cpp" />
+    <ClCompile Include="..\WormWatcher\CameraFinder.cpp" />
+    <ClCompile Include="AbstractCamera.cpp" />
+    <ClCompile Include="ActuonixController.cpp" />
+    <ClCompile Include="AnthonysCalculations.cpp" />
+    <ClCompile Include="AnthonysKeyCodes.h" />
+    <ClCompile Include="AnthonysTimer.cpp" />
+    <ClCompile Include="AsyncSerial.cpp" />
+    <ClCompile Include="Barcode.cpp" />
+    <ClCompile Include="BaslerCam.cpp" />
+    <ClCompile Include="BufferedAsyncSerial.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraFactory.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="ControlledExit.cpp" />
+    <ClCompile Include="ControlPanel.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="DynamixelController.cpp" />
+    <ClCompile Include="DynamixelServo.cpp" />
+    <ClCompile Include="ErrorNotifier.cpp" />
+    <ClCompile Include="GenericCamera.cpp" />
+    <ClCompile Include="ImageFuncs.cpp" />
+    <ClCompile Include="ImagingSourceCamera.cpp" />
+    <ClCompile Include="LabJackFuncs.cpp" />
+    <ClCompile Include="LidHandler.cpp" />
+    <ClCompile Include="OxCnc.cpp" />
+    <ClCompile Include="PlateMap.cpp" />
+    <ClCompile Include="PlateTray.cpp" />
+    <ClCompile Include="QRcode.cpp" />
+    <ClCompile Include="QRcode.h" />
+    <ClCompile Include="ScriptActions.cpp" />
+    <ClCompile Include="ShapeFinder.cpp" />
+    <ClCompile Include="PlateTracker.cpp" />
+    <ClCompile Include="WorMotel.cpp" />
+    <ClCompile Include="WormSocket.cpp" />
+    <ClCompile Include="SocketProgramming.cpp" />
+    <ClCompile Include="TestScripts.cpp" />
+    <ClCompile Include="Worm.cpp" />
+    <ClCompile Include="WormFinder.cpp" />
+    <ClCompile Include="Worms.cpp" />
+    <ClCompile Include="ThorlabsCamera.cpp" />
+    <ClCompile Include="ThreadFuncs.cpp" />
+    <ClCompile Include="WormPick.cpp" />
+    <ClCompile Include="WormPicker.cpp" />
+    <ClCompile Include="WormShape.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="WPHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\tisudshl.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\AnalogChannelItem.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\Codec.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\DeBayerTransform.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\dshow_header.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\dstring.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\dvector.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\Error.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FilterDll.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FilterFactory.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FilterLoader.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameFilter.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameFilterBase.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameFilterImpl.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameHandlerSink.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameNotificationSink.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameQueueBuffer.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameQueueSink.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameSnapSink.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\FrameTypeInfo.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\Grabber.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\GrabberListener.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\GrabberSinkType.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\iframe_def.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\int_interface_pre.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\IVCDProperty.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\IVCDPropertyInterfaces.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\IVCDPropertyInterfaces_inl.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\IVCDProperty_inl.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\libbasedefs.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\libutil_string.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\MediaSampleInfo.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\MediaSampleInfoDataStore.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\MediaStreamContainer.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\MediaStreamSink.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\MemBuffer.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\MemBufferCollection.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\OverlayBitmap.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\simplectypes.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\smart_com.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\smart_ptr.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\udshl_defs.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\udshl_include.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\udshl_lnk.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\VCDPropertyID.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\VideoCaptureDeviceItem.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\VideoFormatDesc.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\VideoFormatItem.h" />
+    <ClInclude Include="..\..\..\..\..\Documents\IC Imaging Control 3.5\classlib\include\udshl\VideoNormItem.h" />
+    <ClInclude Include="AbstractCamera.h" />
+    <ClInclude Include="ActuonixController.h" />
+    <ClInclude Include="AnthonysCalculations.h" />
+    <ClInclude Include="AnthonysColors.h" />
+    <ClInclude Include="AnthonysTimer.h" />
+    <ClInclude Include="AsyncSerial.h" />
+    <ClInclude Include="Barcode.h" />
+    <ClInclude Include="BaslerCam.h" />
+    <ClInclude Include="BufferedAsyncSerial.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraFactory.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="ControlledExit.h" />
+    <ClInclude Include="ControlPanel.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="DynamixelController.h" />
+    <ClInclude Include="DynamixelControlTable.h" />
+    <ClInclude Include="DynamixelServo.h" />
+    <ClInclude Include="ErrorNotifier.h" />
+    <ClInclude Include="FileNames.h" />
+    <ClInclude Include="GenericCamera.h" />
+    <ClInclude Include="HardwareSelector.h" />
+    <ClInclude Include="ImagingSourceCamera.h" />
+    <ClInclude Include="WorMotel.h" />
+    <ClInclude Include="WormSocket.h" />
+    <ClInclude Include="SocketProgramming.h" />
+    <ClInclude Include="ImageFuncs.h" />
+    <ClInclude Include="json.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="LabJackFuncs.h" />
+    <ClInclude Include="LabJackWB.h" />
+    <ClInclude Include="LidHandler.h" />
+    <ClInclude Include="MatIndex.h" />
+    <ClInclude Include="OxCnc.h" />
+    <ClInclude Include="PlateMap.h" />
+    <ClInclude Include="PlateTracker.h" />
+    <ClInclude Include="PlateTray.h" />
+    <ClInclude Include="PlateTrayScriptStep.h" />
+    <ClInclude Include="Script.h" />
+    <ClInclude Include="ScriptActions.h" />
+    <ClInclude Include="ShapeFinder.h" />
+    <ClInclude Include="SharedOutFile.h" />
+    <ClInclude Include="TestScripts.h" />
+    <ClInclude Include="Worm.h" />
+    <ClInclude Include="WormExceptions.h" />
+    <ClInclude Include="WormFinder.h" />
+    <ClInclude Include="Worms.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StrictLock.h" />
+    <ClInclude Include="ThorlabsCamera.h" />
+    <ClInclude Include="ThreadFuncs.h" />
+    <ClInclude Include="WormPick.h" />
+    <ClInclude Include="WormShape.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="WPHelper.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
