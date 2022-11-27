@@ -1,0 +1,321 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>528e5ad7-2d9d-45ac-863a-cdd8fde3c10a</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>RCNN_Segment_Image.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ActivityAnalyzer</Name>
+    <RootNamespace>ActivityAnalyzer</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda37-64</InterpreterId>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>"E:\Patrick\pdm_auxin_test_1" "09-26"</CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ActivityCurveGenerator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActivityCurves.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AnalysisFrontPage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AnthonysPlots.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AugmentMaskRCNNTrainingData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConvertGrayMaskToRGBMask.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenderCountInImages.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MaskWormMotel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mask_rcnn\Mask_RCNN_Dataset.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mask_rcnn\Mask_RCNN_Train.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MoveEmptyMasks.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MoveImagesAndMasks.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NonCorrespondingImagesAndMasks.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrependFilenames.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Calculations.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AnalysisPlots.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="breakUpSession.py" />
+    <Compile Include="CNN_AugmentEqualizeClasses.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_convertToMasksForMaskRCNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_DrawLabelsInImages.py" />
+    <Compile Include="CNN_exportFramesFromVideo.py" />
+    <Compile Include="CNN_exportPickBackground.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_exportSmallImages.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_exportRandomLoc3frames.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_ExportROIContClean.py" />
+    <Compile Include="CNN_ExportROIContCleanSMALL.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_exportToONNX.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_exportWormBackground.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_exportWormMotionBackground.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_Helper.py" />
+    <Compile Include="CNN_humanAccuracy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_LabelContaminationManually.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_LabelWormMotion.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_Train.py" />
+    <Compile Include="exportWormMotionTestImage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RCNN_client_socket.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RCNN_exportToCPP.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RCNN_Helper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mask_rcnn\Tutorial_Mask_R_CNN_PyTorchOfficial.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mask_rcnn_utils\coco_eval.py" />
+    <Compile Include="mask_rcnn_utils\coco_utils.py" />
+    <Compile Include="mask_rcnn_utils\engine.py" />
+    <Compile Include="mask_rcnn_utils\group_by_aspect_ratio.py" />
+    <Compile Include="mask_rcnn_utils\presets.py" />
+    <Compile Include="mask_rcnn_utils\train.py" />
+    <Compile Include="mask_rcnn_utils\transforms.py" />
+    <Compile Include="mask_rcnn_utils\utils.py" />
+    <Compile Include="mergeAllImageFiles.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DisplaySubprocessOutput.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="getInterSessionDiffImg.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mask_rcnn\Tutorial_R_CNN_Schmidt.py" />
+    <Compile Include="RCNN_Segment_Image.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_ls_annotate_intersess.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WWShell.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscript96WellPostProcessing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscript96wellThrashing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptLensCalculator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptQuiz.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RNAi_AssignRSNames.py" />
+    <Compile Include="RNAi_AssignScreenNames.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="censorWellsAuto.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RNAi_ManualLabelsOverview.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="roipoly_adf.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_AnnotateWellVsOff.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_averageWholeWM.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_ExportWellVsOff.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptQuizAnswers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptTestSVMForContamination.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="transparencyUniformityImage.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_annotate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="csvio.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ErrorNotifier.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNN_EvaluateManualSegmentations.py" />
+    <Compile Include="CNN_ExportROIContCleanDiff.py" />
+    <Compile Include="CNN_ExportWormBackgroundImages.py" />
+    <Compile Include="getSessionData.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageProcessing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="importExcelManWellScores.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LabeledProgressbar.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="manualImageInspector.py" />
+    <Compile Include="plotGroupAverages.py" />
+    <Compile Include="ReformatParentDirectory.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="setImageOutpathsBySession.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="testDoubleListbox.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="validateAnalysisFolder.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="verifyDirlist.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_averageWell.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_extractWellBG.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_ls_annotate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_ls_annotate_bywell.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WM_segment.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WWAnalyzer.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlateTreeView.py" />
+    <Compile Include="zscriptTestContaminationStats.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptTestKerasTrain.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptTtkExample2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptCheckForDuplicateImages.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptEvalWormSegs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptTestCNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptLiveVsMatlab.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptCostSimulation.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptCostSimulationRealCorr.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="segmentWormsAdaptThresh.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptLiveVsPost.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptTestMeanBackground.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="zscriptWorMotelMotion.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda36-64" />
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda37-64" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mask_rcnn\" />
+    <Folder Include="mask_rcnn_utils\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
