@@ -1,7 +1,6 @@
+# WormPickerControl V1.0
 
-#WormPickerControl V1.0
-
-##Folder description
+## Folder description
 
 The folder "WormPicker" contains the C++ source code for controlling WormPicker hardware for task implementation.
 
