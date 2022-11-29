@@ -95,7 +95,9 @@ class WormPicker(object):
         self.InitializeResources()
 
         # run the mask-rcnn server
-        self.mask_rcnn_subprocess_obj = subprocess.Popen([os.path.normpath(self.launch_params['mask_rcnn_launcher_directory'])])
+        #self.mask_rcnn_subprocess_obj = subprocess.Popen([os.path.normpath(self.launch_params['mask_rcnn_launcher_directory'])])
+
+        self.mask_rcnn_subprocess_obj = subprocess.run(["python", self.launch_params['mask_rcnn_launcher_directory']])
   
         # run the exe program
         self.exe_subprocess_obj = subprocess.Popen([os.path.normpath(self.launch_params['exe_directory'])])
