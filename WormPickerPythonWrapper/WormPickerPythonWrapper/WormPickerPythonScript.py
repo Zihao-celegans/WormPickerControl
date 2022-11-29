@@ -14,9 +14,6 @@ import Phenotype as phty
 
 
 
-# test push change
-
-
 def main():
 
     # Launch WormPicker to run in background and setup connection
