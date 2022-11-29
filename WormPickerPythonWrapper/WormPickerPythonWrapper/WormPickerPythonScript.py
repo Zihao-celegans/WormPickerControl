@@ -13,9 +13,6 @@ import PlateIndex as pidx
 import Phenotype as phty
 
 
-
-# test push byu others 3
-
 def main():
 
     # Launch WormPicker to run in background and setup connection
