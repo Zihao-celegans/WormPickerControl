@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WormPickerPythonWrapper"
   ],
-  "SelectedNode": "\\WormPickerPythonAPI.sln",
+  "SelectedNode": "\\WormPickerPythonWrapper\\WormPickerPythonAPI.sln",
   "PreviewInSolutionExplorer": false
 }
