@@ -2,7 +2,7 @@
 
 WormPickerControl is control system software for WormPicker, a robotic system for automated *C. elegans* manipulation and analysis, developed and maintained by Fang-Yen Lab.
 
-Documentation and instructions can be found in [Wiki](../../wiki).
+The [Wiki page](../../wiki) contains [documentations](../../wiki/Documentation) and [instructions](../../wiki/Quick Start).
     
 Descriptions of WormPicker can be found at:
     https://www.biorxiv.org/content/10.1101/2022.11.18.517134v1
