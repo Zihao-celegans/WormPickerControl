@@ -4,7 +4,7 @@ WormPickerControl is control system software for [WormPicker](https://www.biorxi
 
 The [Wiki page](../../wiki) contains [documentations](../../wiki/Documentation) and [instructions](../../wiki/Quick-Start).
     
-Descriptions of WormPicker can be found at [BioRxiv](https://www.biorxiv.org/content/10.1101/2022.11.18.517134v1).
+Descriptions of WormPicker can be found at [bioRxiv](https://www.biorxiv.org/content/10.1101/2022.11.18.517134v1).
     
 WormPickerControl is hosted on Github, the repository can be viewed and cloned at:
     https://github.com/Zihao-celegans/WormPickerControl
