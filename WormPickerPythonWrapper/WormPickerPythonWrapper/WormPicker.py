@@ -328,7 +328,7 @@ class WormPicker(object):
         ## Wait for script action feedback from WormPicker and end the script
         return self.ExitCurrentScript(self.CenterWorm)
 
-    def FindWorm():
+    def FindWorm(self):
         '''
         Find all the worms in the FOV (assuming the camera has been placed above the ROI already)
         Return the number of worms found and their positions in the image
