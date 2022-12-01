@@ -212,7 +212,7 @@ class WormPicker(object):
         Name of argument:       Type:                       Note:
         N.A.                    N.A.                        N.A.
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
 
         '''
 
@@ -235,7 +235,7 @@ class WormPicker(object):
         show_img                bool                        True: show intermediate result images while computing the pixel shift
                                                             False: do not show any image
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
 
         '''
         ## Return if input type is not correct
@@ -270,7 +270,7 @@ class WormPicker(object):
         range                   int                         range of servo movement for calibration
         step_sz                 int                         step size of incremental movement for pick raster scanning
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
         ## Return if input type is not correct
         if not errh.Check_Input_Argument_Type(
@@ -302,7 +302,7 @@ class WormPicker(object):
         pickable_only           bool                        True: Only center to worms within wormfinder's pickable region; False: otherwise
         set_pick_to_start       bool                        True: Immediately position the pick to the start position once we've found a worm; False: otherwise
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Return if input type is not correct
@@ -339,7 +339,7 @@ class WormPicker(object):
         Return:                 Type:                       Note:                  
         num_worm                int                         number of worms found in the FOV
         positions               list of cv.point            pixel positions of all the worms found
-        result                  bool                        True: successful execution; False: error occured or execution failed
+        result                  bool                        True: successful execution; False: error occurred or execution failed
 
         '''
         ## Send the command to WormPicker
@@ -359,7 +359,7 @@ class WormPicker(object):
         heat_time               int                         Heating time (in second)
         cool_time               float                       Waiting time for cooling (in second)
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Send the command to WormPicker
@@ -397,7 +397,7 @@ class WormPicker(object):
         focus                   bool                        True: Perform laser autofocus after moving (Typically used here if moving to destination plate to drop a worm);
                                                             False: Do not perform laser autofocus
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
 
@@ -466,7 +466,7 @@ class WormPicker(object):
 
         num_rfp_spots           int                         the number of RFP spots expected on a single worm (only needed if searching for rfp worms)
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Return if input type is not correct
@@ -506,7 +506,7 @@ class WormPicker(object):
                                                              - 0: AUTO = automatically find worm before picking
                                                              - 1: MANUAL = user clicks on worm before picking
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Return if input type is not correct
@@ -548,7 +548,7 @@ class WormPicker(object):
                                                              - 1: MANUAL = user clicks on a spot for dropping
 
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Return if input type is not correct
@@ -590,7 +590,7 @@ class WormPicker(object):
         strain                  string                      the strain of worms to be transferred
         genNum                  int                         the generation number of worms in destination plate
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Return if input type is not correct
@@ -646,7 +646,7 @@ class WormPicker(object):
         check_morph                bool                        whether check morphology, ONLY applicable when want_spec_phenotype is False
         check_stage                bool                        whether check developmental stage, ONLY applicable when want_spec_phenotype is False
 
-        Return                     bool                        True: successful execution; False: error occured or execution failed
+        Return                     bool                        True: successful execution; False: error occurred or execution failed
         '''
         ## Return if input type is not correct
         if errh.Check_Input_Argument_Type([idx_plate, num_worm, want_spec_phenotype, phenotype, thresh, check_sex, check_GFP, check_RFP, check_morph, check_stage],
@@ -711,7 +711,7 @@ class WormPicker(object):
         idx_dest:               PlateIndex object           (row and col) of destination plate
         idx_inter:              PlateIndex object           (row and col) of intermediate picking plate
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         
         '''
 
@@ -749,7 +749,7 @@ class WormPicker(object):
         rows                    list of int                 rows containing plates to screen.
                                                             The script will start screening at the lowest number row, and work in ascending order.
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Return if input type is not correct
@@ -794,7 +794,7 @@ class WormPicker(object):
         rows_dest               list of int                 rows of plates to single worms into. 
                                                             The script will start singling to the lowest number row, and work in ascending order.
 
-        Return                  bool                        True: successful execution; False: error occured or execution failed
+        Return                  bool                        True: successful execution; False: error occurred or execution failed
         '''
 
         ## Return if input type is not correct
