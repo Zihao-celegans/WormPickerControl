@@ -95,7 +95,9 @@ class WormPicker(object):
         self.InitializeResources()
 
         # run the mask-rcnn server
-        self.mask_rcnn_subprocess_obj = subprocess.Popen([os.path.normpath(self.launch_params['mask_rcnn_launcher_directory'])])
+        #self.mask_rcnn_subprocess_obj = subprocess.Popen([os.path.normpath(self.launch_params['mask_rcnn_launcher_directory'])])
+
+        self.mask_rcnn_subprocess_obj = subprocess.run(["python", self.launch_params['mask_rcnn_launcher_directory']])
   
         # run the exe program
         self.exe_subprocess_obj = subprocess.Popen([os.path.normpath(self.launch_params['exe_directory'])])
@@ -326,7 +328,7 @@ class WormPicker(object):
         ## Wait for script action feedback from WormPicker and end the script
         return self.ExitCurrentScript(self.CenterWorm)
 
-    def FindWorm():
+    def FindWorm(self):
         '''
         Find all the worms in the FOV (assuming the camera has been placed above the ROI already)
         Return the number of worms found and their positions in the image

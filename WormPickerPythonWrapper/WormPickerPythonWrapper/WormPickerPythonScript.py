@@ -13,7 +13,6 @@ import PlateIndex as pidx
 import Phenotype as phty
 
 
-
 def main():
 
     # Launch WormPicker to run in background and setup connection
