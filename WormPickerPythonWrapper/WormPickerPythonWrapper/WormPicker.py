@@ -492,7 +492,7 @@ class WormPicker(object):
         ## Wait for script action feedback from WormPicker and end the script
         return self.ExitCurrentScript(self.Phenotype)
 
-    def SpeedPick(self, dig_amount=5, sweep_amount=15, pause_time=0.0, restore_height_after=False, center_during_pick=True, picking_mode=1):
+    def SpeedPick(self, dig_amount=5, sweep_amount=15, pause_time=0.0, restore_height_after=False, center_during_pick=True, picking_mode=0):
         '''
         Perform a single picking action on the agar surface.
 
@@ -505,8 +505,6 @@ class WormPicker(object):
         picking_mode            int                         The picking mode
                                                              - 0: AUTO = automatically find worm before picking
                                                              - 1: MANUAL = user clicks on worm before picking
-                                                             - 2: DROP = don't find a worm, but look for it after (buggy as of 10/23/2019)
-                                                             - 3: NONE = Just pick, e.g. for coating.
 
         Return                  bool                        True: successful execution; False: error occured or execution failed
         '''
@@ -535,7 +533,7 @@ class WormPicker(object):
         ## Wait for script action feedback from WormPicker and end the script
         return self.ExitCurrentScript(self.SpeedPick)
 
-    def SpeedDrop(self, dig_amount=3, sweep_amount=-18, pause_time=12.0, restore_height_after=False, center_during_pick=False, picking_mode=1):
+    def SpeedDrop(self, dig_amount=3, sweep_amount=-18, pause_time=2.0, restore_height_after=False, center_during_pick=False, picking_mode=0):
         '''
         Perform a single drop action on the agar surface.
 
@@ -546,10 +544,9 @@ class WormPicker(object):
         restore_height_after    bool                        Restore height after - i.e. don't learn touch height from this picking operation
         center_during_pick      bool                        Do centering during the pick
         picking_mode            int                         The picking mode
-                                                             - 0: AUTO = automatically find worm before picking
-                                                             - 1: MANUAL = user clicks on worm before picking
-                                                             - 2: DROP = don't find a worm, but look for it after (buggy as of 10/23/2019)
-                                                             - 3: NONE = Just pick, e.g. for coating.
+                                                             - 0: AUTO = automatically find a place to drop
+                                                             - 1: MANUAL = user clicks on a spot for dropping
+
 
         Return                  bool                        True: successful execution; False: error occured or execution failed
         '''
@@ -669,11 +666,11 @@ class WormPicker(object):
                 non_zero_args = [
                     num_worm,
                     int(want_spec_phenotype),
-                    Phenotype.sex.value,
-                    Phenotype.GFP.value,
-                    Phenotype.RFP.value,
-                    Phenotype.morph.value,
-                    Phenotype.stage.value,
+                    phenotype.sex.value,
+                    phenotype.GFP.value,
+                    phenotype.RFP.value,
+                    phenotype.morph.value,
+                    phenotype.stage.value,
                     thresh
                     ]
                 )
@@ -742,7 +739,7 @@ class WormPicker(object):
 
     def ScreenPlates(self, num_plate, num_wpp, rows):
         '''
-        Screens plates for the desired phenotype
+        Inspect phenotypes of a certain amount of worms over a set of plates.
         You can specify up to 8 rows that contain plates to screen. If you specify a row for screening the script will assume EVERY
         location in that row contains a plate to screen.
 
