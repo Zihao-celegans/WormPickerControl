@@ -574,8 +574,9 @@ bool Worm::PhenotypeWormFromMaskRCNNResults(cv::Mat& img, maskRCNN_results& resu
 	// Determine if the worm is dumpy
 	classifyDumpy(mask.size());
 
-	// Determine stage of worm based on the size of the mask
-	classifyStage(mask);
+	// Determine stage of worm
+	//classifyStageByArea(mask); // By size
+	classifyStageByLeng(worm_length, mask.size()); // By length
 
 	// GFP phenotyping
 	if (ptr_gfp_frm != nullptr) {
@@ -680,7 +681,7 @@ void Worm::classifyDumpy(Size img_size) {
 	current_phenotype.MORPH_type = (dumpy_ratio > dumpy_ratio_thresh) ? DUMPY : NORMAL;
 }
 
-void Worm::classifyStage(const Mat& worm_mask) {
+void Worm::classifyStageByArea(const Mat& worm_mask) {
 	int num_worm_pixels = countNonZero(worm_mask);
 	cout << "Number pixels for stage: " << num_worm_pixels << endl;
 
@@ -726,6 +727,53 @@ void Worm::classifyStage(const Mat& worm_mask) {
 		current_phenotype.STAGE_type = L1_LARVA;
 	}
 
+}
+
+
+void Worm::classifyStageByLeng(int WormLeng, cv::Size& img_size) {
+
+	cout << "Worm Length: " << WormLeng << endl;
+
+	if (WormLeng > 300 && WormLeng < 489) { // if the length is too long then something must be wrong
+		// Adult
+		current_phenotype.STAGE_type = ADULT;
+		return;
+	}
+
+	if (current_phenotype.SEX_type == MALE) {
+		current_phenotype.STAGE_type = ADULT; // Technically we could have L4_LARVA males, but stage is not really important when dealing with Males so we'll just say its an adult.
+		return;
+	}
+
+	// Check to see if the worm mask is too terminate to the edge of the mask (meaning the worm may have been cut off in the image)
+	if (checkEdgeProximity(img_size, 20)) {
+		// Bounding box is too terminate to the edge to determing the stage
+		current_phenotype.STAGE_type = UNKNOWN_STAGE;
+		return;
+	}
+
+	if (WormLeng > 207 && WormLeng <= 300) {
+		current_phenotype.STAGE_type = L4_LARVA; // Technically in this size range, if we don't know if its male or herm because we failed to identify the gender with the network... 
+					// we could have L4_LARVA herm, adult male, or L4_LARVA male here. But again, because stage doesnt really matter for Males we can safely label it L4_LARVA, rather than unknown stage.
+	}
+
+	else if (WormLeng > 163 && WormLeng <= 207) {
+		current_phenotype.STAGE_type = L3_LARVA;
+	}
+
+	else if (WormLeng > 121 && WormLeng <= 163) {
+		current_phenotype.STAGE_type = L2_LARVA;
+	}
+
+	else if (WormLeng > 0 && WormLeng <= 121){
+		current_phenotype.STAGE_type = L1_LARVA;
+	}
+
+	else {
+		current_phenotype.STAGE_type = UNKNOWN_STAGE;
+	}
+
+	return;
 }
 
 bool Worm::PhenotypeFluo(cv::Mat* fluo_img, cv::Mat& mask, int thresh_val, int thresh_area, int iter, bool show_debug, bool single_worm_in_img, double* max_fluo_inten) {

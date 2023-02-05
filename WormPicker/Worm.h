@@ -172,7 +172,8 @@ public:
 	bool checkHeadTail(const cv::Mat& img, cv::dnn::Net net);
 
 	void classifyDumpy(cv::Size img_size);
-	void classifyStage(const cv::Mat& worm_mask);
+	void classifyStageByArea(const cv::Mat& worm_mask);
+	void classifyStageByLeng(int WormLeng, cv::Size& img_size);
 	bool PhenotypeFluo(cv::Mat* fluo_img, cv::Mat& mask, int thresh_val, int thresh_area, int iter, bool show_debug = false, bool single_worm_in_img = false, double* max_fluo_inten = nullptr);
 
 
